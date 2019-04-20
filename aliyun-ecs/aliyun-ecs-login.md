@@ -15,10 +15,9 @@ then you can login via `ssh root@<hostname>` (still with password).
 
 ## Login via SSH Keys
 *Note:* The following documents the way how [the article: How To Set Up SSH Keys](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2) sets up ssh keys. 
-Please contact me for the private key.
 
 1. `ssh-keygen -t rsa`: create the RSA key pair
 2. store the keys and passphrase: by default, it is `~/.ssh/id_rsa`
-3. `ssh-copy-id user@123.45.56.78`: copy the public key onto the remote server
+3. `ssh-copy-id <user>@<ip>`: copy the public key onto the remote server
 
-Now you can login via `ssh root@<IP>` or `ssh root@<hostname>` *without* entering password every time.
+Now you can login via `ssh <user>@<ip>` or `ssh <user>@<hostname>` *without* entering password every time.

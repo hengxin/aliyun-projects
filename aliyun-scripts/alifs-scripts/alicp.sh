@@ -72,7 +72,7 @@ fi
 
 echo ""
 echo "local file/dir is '$ldir'."
-echo "remote cmd is '$rdir'."
+echo "remote dir is '$rdir'."
 echo "hosts is '$hosts'."
 echo ""
 
@@ -83,3 +83,5 @@ for host in $hosts; do
 	echo "$host:"	
 	rsync -avzP -e 'ssh' $ldir root@$host:$rdir &
 done
+
+wait
